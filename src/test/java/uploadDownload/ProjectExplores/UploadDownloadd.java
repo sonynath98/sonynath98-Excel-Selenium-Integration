@@ -54,7 +54,7 @@ public class UploadDownloadd {
 			//Verify updated excel data showing in the web table
 			String columnPrice = driver.findElement(By.xpath("//div[text()='Price']")).getDomAttribute("data-column-id");
 			String actualPrice = driver.findElement(By.xpath("//div[text()='"+fruitName+"']/parent::div/parent::div/div[@id='cell-"+columnPrice+"-undefined']")).getText();
-			System.out.println(actualPrice);
+			
 			Assert.assertEquals(actualPrice, updatedPrice);
 			
 			driver.close();
